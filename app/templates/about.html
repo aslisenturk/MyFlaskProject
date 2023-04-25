@@ -1,0 +1,57 @@
+<!-- This is a Jinja2 template that extends a base HTML template and
+defines a block of content to be rendered in the body of the page.
+The first line `{% extends 'base.html' %}` inherits from a base HTML file.
+The block of content is defined within the `{% block body_content %}`
+and `{% endblock %}` tags. -->
+
+{% extends 'base.html' %}
+
+{% block body_content %}
+
+<div id="contents">
+    <div id="about">
+        <div class="frame1">
+            <img src="/static/images/jumping.jpg" alt="Img">
+        </div>
+        <h2>About</h2>
+        <ul>
+            <li>
+                <h4>Lorem ipsum</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus volutpat purus nec
+                    luctus. Sed vitae orci laoreet, suscipit mauris sit amet, luctus dui. Praesent ac malesuada eros.
+                    Nunc vehicula iaculis leo, vitae ornare ante porttitor et. Integer ac pellentesque felis. Nam ligula
+                    urna, semper ut sagittis vel, ultrices vitae nulla. Donec pulvinar vitae tortor nec cursus.
+                </p>
+            </li>
+            <li>
+                <h4>dolor sit amet</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus volutpat purus nec
+                    luctus. Sed vitae orci laoreet, suscipit mauris sit amet, luctus dui. Praesent ac malesuada eros.
+                    Nunc vehicula iaculis leo, vitae ornare ante et. Pellentesque lectus orci, sollicitudin sed auctor
+                    eget, posuere in nulla. Integer ac pellentesque felis. Donec pulvinar vitae tortor nec cursus.
+                </p>
+            </li>
+            <li>
+                <h4>Lorem ipsum</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus volutpat purus nec
+                    luctus. Sed vitae orci laoreet, suscipit mauris sit amet, luctus dui. Praesent ac malesuada eros.
+                    Nunc vehicula iaculis leo, vitae ornare ante porttitor et.
+                </p>
+            </li>
+            <li>
+                <h4>dolor sit amet</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus volutpat purus nec
+                    luctus. Sed vitae orci laoreet, suscipit mauris sit amet, luctus dui. Praesent ac malesuada eros.
+                    Nunc vehicula iaculis leo, vitae ornare ante porttitor et. Pellentesque lectus orci, sollicitudin
+                    sed auctor eget, posuere in nulla.
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+<!-- This is a Jinja2 template that extends a base HTML template and
+defines a block of content to be rendered in the body of the page.
+The first line `{% extends 'base.html' %}` inherits from a base HTML file.
+The block of content is defined within the `{% block body_content %}`
+and `{% endblock %}` tags. -->
+
+{% extends 'base.html' %}
+
+{% block body_content %}
+
+<div id="contents">
+    <div class="body">
+        <div class="frame1">
+            <img src="/static/images/jumping.jpg" alt="Img">
+        </div>
+        <h2>Welcome to Charlie Dance Studio</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a odio commodo, tempor diam sit amet,
+            ultricies felis. Vestibulum nec laoreet lectus.
+        </p>
+        <p>
+            Phasellus at libero nisl. Sed quis nisi quis dolor lobortis
+            varius vitae a turpis. Pellentesque ut condimentum sem. Fusce dignissim, risus id vehicula efficitur, nisl
+            elit commodo orci, vel feugiat libero mauris in ante.
+        </p>
+        <p>
+            Nulla posuere magna non tincidunt tempor. Cras
+            lobortis non purus nec vehicula. Aenean aliquet porta lectus, ut faucibus nibh tristique sit amet. Quisque
+            augue nisi, molestie a consequat vel, imperdiet id purus. Suspendisse vestibulum fringilla metus, sit amet
+            ultricies mauris mattis quis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eges- tas auctor condimentum. Aliquam nec
+            augue ut risus imperdiet ornare suscipit non odio. Curabitur tincidunt nunc at nunc vehicula id mattis
+            libero vulputate. Sed gravida aliquet nunc, vitae sollicitudin urna pharetra nec.
+        </p>
+    </div>
+</div>
+
+{% endblock %}

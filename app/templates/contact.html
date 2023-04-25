@@ -1,0 +1,65 @@
+<!-- This is a Jinja2 template that extends a base HTML template and
+defines a block of content to be rendered in the body of the page.
+The first line `{% extends 'base.html' %}` inherits from a base HTML file.
+The block of content is defined within the `{% block body_content %}`
+and `{% endblock %}` tags. -->
+
+{% extends 'base.html' %}
+
+{% block body_content %}
+
+<div id="contents">
+    <div id="contact">
+        <form method="post" action="{{ url_for('contact') }}">
+            <h2>Contact Form</h2>
+            <label>Name</label>
+            <input type="text" name="name" value="" class="txtfield" required>
+            <label>Contact Number</label>
+            <input type="text" name="number" value="" class="txtfield" required>
+            <label>Email Address</label>
+            <input type="text" name="email" value="" class="txtfield" required>
+            <label>Message</label>
+            <textarea id="message" name="message" class="message" required></textarea>
+            <input type="submit" value="Submit" class="btn">
+        </form>
+        <div>
+            <h2>Get in Touch with Us</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus volutpat purus nec luctus.
+                Sed vitae orci laoreet, suscipit mauris sit amet, luctus dui.
+            </p>
+            <p>
+                Praesent ac malesuada eros. Nunc vehicula iaculis leo, vitae ornare ante porttitor et. Pellentesque
+                lectus orci, sollicitudin sed auctor eget, posuere in nulla.
+            </p>
+            <p>
+                Nam ligula urna, semper ut sagittis vel, ultrices vitae nulla. Donec pulvinar vitae tortor nec cursus.
+                Sed facilisis augue magna, vel pellentesque dolor pharetra porta.
+            </p>
+            <h2>Contact Information</h2>
+            <ul>
+                <li>
+                    <span>Address</span>
+                    <p>
+                        Charlie Dance Studio<br> Kadıköy, Istanbul<br><br>
+                    </p>
+                </li>
+                <li>
+                    <span>Phone</span>
+                    <p>
+                        123-456-7890<br><br>
+                    </p>
+                </li>
+                <li>
+                    <span>Email</span>
+                    <p>
+                        <a href="{{ url_for('index') }}">info@charliedance.com</a><br> <a
+                            href="{{ url_for('index') }}">enrollment@charliedance.com</a><br><br>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+
+<div id="contents">
+    <ul id="blogs">
+        <li>
+            <div class="header">
+                <div class="details">
+                    <div class="frame3">
+                        <img src="/static/images/dance-tips.jpg" alt="Img">
+                    </div>
+                    <span class="category">Dance Tips &amp; Tricks:</span>
+                    <h3><a href="{{ url_for('blog') }}">Know If Modern Dance Is Right For You</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus volutpat purus nec
+                        luctus. Sed vitae orci laoreet, suscipit mauris sit amet, luctus dui. Praesent ac malesuada
+                        eros. Nunc vehicula iaculis leo, vitae ornare ante porttitor et. Pellentesque lectus orci,
+                        sollicitudin sed auctor eget, posuere in nulla. Integer ac pellentesque felis. Nam ligula urna,
+                        semper ut sagittis vel, ultrices vitae nulla. Donec pulvinar vitae tortor nec cursus.
+                    </p>
+                    <div class="connect">
+                        <p class="time">
+                            Posted 5th of June 2023 in <a href="{{ url_for('blog') }}">Dance Tips & Tricks</a> by Jenny
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="header">
+                <div class="details">
+                    <div class="frame3">
+                        <img src="/static/images/dance-tricks.jpg" alt="Img">
+                    </div>
+                    <span class="category">Dance Tips &amp; Tricks:</span>
+                    <h3><a href="{{ url_for('blog') }}">The Secrets To A Succesful Dancing Career</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus volutpat purus nec
+                        luctus. Sed vitae orci laoreet, suscipit mauris sit amet, luctus dui. Praesent ac malesuada
+                        eros. Nunc vehicula iaculis leo, vitae ornare ante porttitor et. Pellentesque lectus orci,
+                        sollicitudin sed auctor eget, posuere in nulla. Integer ac pellentesque felis. Nam ligula urna,
+                        semper ut sagittis vel, ultrices vitae nulla. Donec pulvinar vitae tortor nec cursus.
+                    </p>
+                    <div class="connect">
+                        <p class="time">
+                            Posted 5th of June 2023 in <a href="{{ url_for('blog') }}">Dance Tips & Tricks</a> by Jenny
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}

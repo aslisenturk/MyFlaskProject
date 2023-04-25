@@ -1,0 +1,140 @@
+<!-- The code is an HTML template for a website designed for Charlie Dance.
+It includes a main content section which can be filled with specific content depending on the page,
+between the lines {% block body_content %} and {% endblock %}. The code also contains Jinja2
+templating syntax used for dynamic rendering of the page depending on the user's authentication status. -->
+
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Charlie Dance</title>
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+</head>
+<body>
+<div id="page">
+    <div id="header">
+        <div>
+            <a href="{{ url_for('index') }}" id="logo"><img src="/static/images/logo.png" alt="LOGO"></a>
+            <ul id="navigation">
+                <li class="selected">
+                    <a href="{{ url_for('index') }}">home</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('about') }}">about</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('blog') }}">blog</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('contact') }}">contact</a>
+                </li>
+                {% if login_auth == False %}
+                <li>
+                    <a href="{{ url_for('login') }}">log in</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{{ url_for('login') }}"> {{ username }} | log out</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+        <span class="shadow"></span>
+    </div>
+
+    {% block body_content %}
+
+    {% endblock %}
+
+    <div id="footer">
+        <span class="shadow"></span>
+        <div>
+            <div class="section">
+                <h5>Navigation Menu</h5>
+                <ul class="navigation">
+                    <li>
+                        <a href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('blog') }}">Blog</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    {% if login_auth == False %}
+                    <li>
+                        <a href="{{ url_for('login') }}">Log In</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{{ url_for('login') }}"> {{ username }} | Log Out</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="section">
+                <h5>Recent Blog Posts</h5>
+                <ul>
+                    <li>
+                        <a href="{{ url_for('blog') }}">Dance Tips &amp; Tricks: How To Know If Modern Dance Is Right
+                            For You</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('blog') }}">Dance Tips &amp; Tricks:The Secrets To A Successful Dancing
+                            Career</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('blog') }}">Daring Dancer: Harillsa Gortengkov</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h5>Studio Hours</h5>
+                <ul>
+                    <li>
+                        Mondays to Fridays: 8am- 5pm
+                    </li>
+                    <li>
+                        Saturdays: 10am-5pm
+                    </li>
+                    <li>
+                        Sundays: 10am-12pm
+                    </li>
+                    <li>
+                        For Appointments: Call 123-456-7890
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h5>Social</h5>
+                <ul class="connect">
+                    <li>
+                        <a href="{{ url_for('index') }}" target="_blank">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('index') }}" target="_blank">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('index') }}" target="_blank">Vimeo</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('index') }}" target="_blank">Google+</a>
+                    </li>
+                </ul>
+                <h5>Newsletter Signup</h5>
+                <form action="{{ url_for('index') }}" method="post" id="newsletter">
+                    <input type="text" value="Enter your email address" class="txtfield"
+                           onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}"
+                           onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+                    <input type="submit" value="" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!-- This is a Jinja2 template that extends a base HTML template and
+defines a block of content to be rendered in the body of the page.
+The first line `{% extends 'base.html' %}` inherits from a base HTML file.
+The block of content is defined within the `{% block body_content %}`
+and `{% endblock %}` tags. -->
+
+{% extends 'base.html' %}
+
+{% block body_content %}
+
+<style>
+  table {
+    max-width: 50px;
+    background-color: white;
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  th {
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid black;
+  }
+
+  td {
+    font-size: 14px;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  input.btn[type="submit"] {
+    background-color: #303030;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+
+<div id="contents">
+    <div id="login">
+        <form method="post" action="{{ url_for('login') }}">
+            <h2>Log In</h2>
+            <label>Username</label><br><br>
+            <input type="text" name="username" value="" class="username" required>
+            <br><br>
+            <label>Password</label><br><br>
+            <input type="password" name="password" value="" class="password" required>
+            <br><br>
+            <input type="submit" value="Submit" class="btn">
+            <br><br>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
